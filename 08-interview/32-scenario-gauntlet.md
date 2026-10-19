@@ -221,6 +221,6 @@ You've covered 32 lessons: foundations, REST design, security, production, beyon
 3. **Build at least Phase 4 of Ledger** ([Lesson 29](../07-project/29-ledger-build-log.md)). If you read all 32 lessons and built nothing, you have recognition, not skill — and interviewers can tell the difference within two follow-up questions.
 4. **Do three timed design rounds** from [Lesson 31 §12](31-design-round-playbook.md), out loud. Score under 8/10 and redo them in a week.
 
-Then → **[TypeScript: Lesson 01](../../TypeScript/README.md)**
+Then → **[TypeScript: Lesson 01](https://github.com/Pawar-Pratik/TypeScript-mastery)**
 
 > The TypeScript track assumes everything you now know about contracts, because **types are contracts enforced at compile time** — the same discipline, at a smaller scale and with a compiler to check it.

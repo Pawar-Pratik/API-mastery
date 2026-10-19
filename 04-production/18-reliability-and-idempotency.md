@@ -290,12 +290,12 @@ export function idempotent(endpoint: string, opts: { required?: boolean } = {}) 
           `UPDATE idempotency_keys
               SET state='completed', response_status=$4, response_body=$5, locked_until=NULL
             WHERE merchant_id=$1 AND endpoint=$2 AND key=$3`,
-          [key, req.merchantId, endpoint, res.statusCode, body],
+          [req.merchantId, endpoint, key, res.statusCode, body],
         );
       } else {
         void db.query(
           `DELETE FROM idempotency_keys WHERE merchant_id=$1 AND endpoint=$2 AND key=$3`,
-          [key, req.merchantId, endpoint],
+          [req.merchantId, endpoint, key],
         );                                    // release the key so a retry can proceed
       }
       return originalJson(body);

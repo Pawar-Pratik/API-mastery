@@ -257,7 +257,7 @@ export async function refresh(presented: string) {
 
 **Why the family burn is correct:** if an attacker steals a refresh token and uses it, the legitimate user's next refresh presents an already-used token — detected, family revoked, user must re-authenticate, attacker also locked out. If instead the *attacker* refreshes second, they're locked out. **Either way the theft is detected and terminated within one refresh cycle**, and the user gets a security notification. This is the OAuth 2.1 recommended behaviour for public clients, and describing it is a strong senior signal.
 
-**The practical wrinkle to mention:** genuine races do happen — two browser tabs refreshing simultaneously, or a mobile app resuming with several queued requests. Mitigations: a short grace window (accept the previous token for ~10 seconds and return the *same* new pair), and client-side single-flight refresh so only one request refreshes while others wait. You'll implement exactly that in the React track ([React L18](../../React/README.md)).
+**The practical wrinkle to mention:** genuine races do happen — two browser tabs refreshing simultaneously, or a mobile app resuming with several queued requests. Mitigations: a short grace window (accept the previous token for ~10 seconds and return the *same* new pair), and client-side single-flight refresh so only one request refreshes while others wait. You'll implement exactly that in the React track ([React L18](https://github.com/Pawar-Pratik/React-mastery)).
 
 ### Browser storage: the final answer
 

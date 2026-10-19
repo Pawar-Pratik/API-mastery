@@ -176,7 +176,7 @@ Why **prefixed** (`pi_`, `cus_`, `re_` — Stripe's convention, now widely copie
 - A support ticket saying `pi_3Nx8` is instantly identifiable; `9c8b7a6d` could be anything.
 - You can validate the *type* at the boundary and reject `POST /refunds {"payment": "cus_9s2k"}` before it becomes a confusing 404.
 - Logs, error messages and Slack conversations become self-describing.
-- In TypeScript you can brand them so the compiler catches type mix-ups ([TS Lesson 09](../../TypeScript/README.md)).
+- In TypeScript you can brand them so the compiler catches type mix-ups ([TS Lesson 09](https://github.com/Pawar-Pratik/TypeScript-mastery)).
 
 Consider **UUIDv7** or ULID if you need sortable-by-time IDs with good index locality (UUIDv4's randomness hurts B-tree inserts at volume). Present them prefixed and treat them as opaque strings to clients.
 
