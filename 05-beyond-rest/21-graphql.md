@@ -230,7 +230,7 @@ metrics.inc("graphql_errors_total", { code, operation: operationName ?? "anonymo
 > ```graphql
 > union RefundResult = RefundSuccess | InsufficientFunds | AlreadyRefunded | PaymentNotRefundable
 > ```
-> Now the client's type checker **forces** it to handle every case, and the `errors` array is reserved for genuine exceptions. This is the "errors as data" pattern, and describing it is a strong senior signal — it's the GraphQL equivalent of the discriminated-union discipline you'll learn in [TypeScript Lesson 09](../../TypeScript/README.md).
+> Now the client's type checker **forces** it to handle every case, and the `errors` array is reserved for genuine exceptions. This is the "errors as data" pattern, and describing it is a strong senior signal — it's the GraphQL equivalent of the discriminated-union discipline you'll learn in [TypeScript Lesson 09](https://github.com/Pawar-Pratik/TypeScript-mastery).
 
 ---
 

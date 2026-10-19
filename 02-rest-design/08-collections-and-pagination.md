@@ -320,7 +320,7 @@ Design decisions in there, each with a reason:
 |---|---|
 | **Object at the top level, never a bare array** | Room to add metadata later without a breaking change (Lesson 05) |
 | **`data` as the key** | Stripe/JSON:API convention; `items`/`results` are equally fine — just be consistent across every collection |
-| **`object` type discriminator** | Lets a typed client discriminate a heterogeneous list, and makes logs readable. Maps perfectly onto a TypeScript discriminated union ([TS L09](../../TypeScript/README.md)) |
+| **`object` type discriminator** | Lets a typed client discriminate a heterogeneous list, and makes logs readable. Maps perfectly onto a TypeScript discriminated union ([TS L09](https://github.com/Pawar-Pratik/TypeScript-mastery)) |
 | **`has_more` not `total_pages`** | Honest and free |
 | **Cursors returned, never constructed by the client** | The one hypermedia pattern that genuinely works (Lesson 06) |
 

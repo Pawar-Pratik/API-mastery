@@ -200,7 +200,7 @@ Config files?                                  → YAML/TOML — and never on th
 | **Enums = lowercase snake_case strings, never integers** | `"succeeded"` is self-documenting in a log; `3` requires a lookup table and breaks if you reorder |
 | **`snake_case` or `camelCase` — pick one and never mix** | Mixing is the loudest possible signal of an unreviewed API. (`snake_case` for public JSON is the most common convention: Stripe, GitHub, Twilio. `camelCase` if your consumers are JS-only) |
 | **Top-level response must be an object, never a bare array** | `[1,2,3]` leaves you nowhere to add `pagination` or `meta` later without a breaking change. Also: bare-array JSON responses were historically exploitable via JSON hijacking |
-| **Never trust client-declared types; validate and coerce at the boundary** | `"amount": "4999"` from a form-encoded client. Parse, don't assume ([TS L15](../../TypeScript/README.md)) |
+| **Never trust client-declared types; validate and coerce at the boundary** | `"amount": "4999"` from a form-encoded client. Parse, don't assume ([TS L15](https://github.com/Pawar-Pratik/TypeScript-mastery)) |
 | **Reject duplicate JSON keys, or at least be aware of them** | Real smuggling vector past validating proxies |
 | **Set a max payload size and a max nesting depth** | Deeply nested JSON is a parser DoS (billion-laughs' JSON cousin) |
 | **Never `eval()` JSON** | Historical; still appears in old code |
